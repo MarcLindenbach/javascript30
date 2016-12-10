@@ -1,8 +1,18 @@
-window.addEventListener('keydown', e => {
-  const key = e.key;
-  const audio = document.querySelector(`audio[data-key='${key}']`);
-  if (!audio) return;
+window.addEventListener('keydown', ({ key }) => {
+  const audioElement = document.querySelector(`audio[data-key='${key}']`);
+  const keyElement = document.querySelector(`.key[data-key='${key}']`);
 
-  audio.currentTime = 0;
-  audio.play();
+  if (!audioElement) return;
+
+  audioElement.currentTime = 0;
+  audioElement.play();
+
+  keyElement.classList.add('playing');
+});
+
+const keys = document.querySelectorAll('.key');
+keys.forEach(key => {
+  key.addEventListener('transitionend', e => {
+    e.target.classList.remove('playing');
+  });
 });
