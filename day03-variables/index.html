@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CSS Variables</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Update CSS Varibles with <span>JS<span></h1>
+
+  <label for="spacing">Spacing</label>
+  <input type="range" name="spacing" min="0" max="200" value="10" class="controls" data-suffix="px" />
+  <br />
+
+  <label for="spacing">Blur</label>
+  <input type="range" name="blur" min="0" max="20" value="5" class="controls" data-suffix="px" />
+  <br />
+
+  <label for="color">Color</label>
+  <input type="color" name="base" value="#2858A2" class="controls">
+
+  <div class="img-container">
+    <img src="img.jpg" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

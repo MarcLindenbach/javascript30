@@ -1,0 +1,32 @@
+:root {
+  --base: #2858A2;
+  --spacing: 10px;
+  --blur: 5px;
+}
+
+body {
+  text-align: center;
+  background-color: #C3C6CB;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-family: 'Roboto Slab', serif;
+}
+
+h1 span {
+  color: var(--base);
+}
+
+.img-container {
+  flex: auto;
+  margin: 1rem;
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+}
