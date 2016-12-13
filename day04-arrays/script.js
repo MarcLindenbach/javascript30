@@ -84,7 +84,6 @@ function renderGraph(data) {
   const barColorStep = Math.round(255 / maxCount);
 
   const tableBody = document.querySelector('#countries tbody');
-  console.log(barColorStep)
   while (tableBody.rows.length) {
     tableBody.deleteRow(0);
   }
@@ -99,7 +98,6 @@ function renderGraph(data) {
     bar.style.marginRight = '1rem';
     bar.style.textAlign = 'center';
     bar.style.color = 'white';
-    console.log(country.count * barColorStep);
     bar.style.backgroundColor = `rgb(0, 0, ${country.count * barColorStep})`;
     bar.style.height = '1.5rem';
     bar.style.width = `${country.count/2}rem`;
