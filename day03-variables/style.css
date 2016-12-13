@@ -19,8 +19,10 @@ h1 span {
 }
 
 .img-container {
+  display: inline-block;
   flex: auto;
   margin: 1rem;
+  max-width: 720px;
   padding: var(--spacing);
   background: var(--base);
   filter: blur(var(--blur));
@@ -28,5 +30,6 @@ h1 span {
 
 .img-container img {
   width: 100%;
+
   height: auto;
 }
