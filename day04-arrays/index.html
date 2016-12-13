@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>JS Arrays</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>Array Functions</h1>
+
+  <div class="from-group">
+    <label for="ageMin">
+      Age Minimum
+    </label>
+    <input type="number" id="ageMin" min="0" max="100" value="32" />
+  </div>
+
+  <div class="form-group">
+    <label for="ageMin">
+      Age Maximum
+    </label>
+    <input type="number" id="ageMax" min="1" max="100" value="40" />
+  </div>
+
+  <div class="form-group">
+    <label for="sort">
+      Sort
+    </label>
+    <select id="sort">
+      <option value="first">First Name</option>
+      <option value="last">Last Name</option>
+      <option value="age">Age</option>
+      <option value="country">Country</option>
+    </select>
+  </div>
+
+  <div class="tables">
+    <table id="people">
+      <caption><h3>People</h3></caption>
+      <thead>
+        <tr>
+          <th>
+            Name
+          </th>
+          <th>
+            Age
+          </th>
+          <th>
+            Country
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+    <table id="countries">
+      <caption><h3>Country Occurrences</h3></caption>
+      <thead>
+        <tr>
+          <th>
+            Country Count
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

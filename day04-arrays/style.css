@@ -1,0 +1,23 @@
+body {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-family: 'Roboto Slab', serif;
+}
+
+.tables {
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+}
+
+th {
+  text-align: left;
+  padding-right: 1rem;
+}
+
+td {
+  padding-right: 1rem;
+}
