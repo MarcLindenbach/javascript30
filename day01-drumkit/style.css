@@ -15,13 +15,12 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-
   border-radius: .2rem;
   padding: .5rem;
   width: 60px;
   border: 2px solid white;
   background-color: rgba(0, 0, 0, .7);
-  transition: all 0.1s;
+  transition: all .1s;
 }
 
 .key.playing {

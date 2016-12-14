@@ -36,8 +36,8 @@ body {
   position: absolute;
   left: 8rem;
   transform-origin: left;
-  transition: all 0.05s;
-  transition-timing-function: cubic-bezier(0.42, 0, 0.65, 2.01);
+  transition: all .05s;
+  transition-timing-function: cubic-bezier(.42, 0, .65, 2.01);
   background-color: rgba(20,20,20,.8);
 }
 
