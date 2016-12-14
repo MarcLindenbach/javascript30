@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  font-family: 'Indie Flower', cursive;
+}
+
+.panels {
+  display: flex;
+  height: 100vh;
+}
+
+.panel {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  font-size: 3rem;
+  text-shadow: 1px 1px 10px #000,
+               -1px -1px 10px #000;
+
+  transition: all 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11);
+  cursor: pointer;
+}
+
+.panel p {
+  display: flex;
+}
+
+.panel1 {
+  background: url(images/tensleep.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.panel2 {
+  background: url(images/goat.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.panel3 {
+  background: url(images/alabama.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.panel4 {
+  background: url(images/louis.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.panel5 {
+  background: url(images/cowboy.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.selected {
+  flex: 10;
+  font-size: 5rem;
+}
