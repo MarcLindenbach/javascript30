@@ -21,6 +21,7 @@ body {
   border: 2px solid white;
   background-color: rgba(0, 0, 0, .7);
   transition: all .1s;
+  cursor: pointer;
 }
 
 .key.playing {

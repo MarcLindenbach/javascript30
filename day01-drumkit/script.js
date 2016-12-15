@@ -1,4 +1,20 @@
+const keys = document.querySelectorAll('.key');
+
 window.addEventListener('keydown', ({ key }) => {
+  playKey(key);
+});
+
+keys.forEach(key => {
+  key.addEventListener('transitionend', e => {
+    e.currentTarget.classList.remove('playing');
+  });
+  key.addEventListener('click', e => {
+    const key = e.currentTarget.dataset['key'];
+    playKey(key);
+  });
+});
+
+function playKey(key) {
   const audioElement = document.querySelector(`audio[data-key='${key}']`);
   const keyElement = document.querySelector(`.key[data-key='${key}']`);
 
@@ -8,11 +24,4 @@ window.addEventListener('keydown', ({ key }) => {
   audioElement.play();
 
   keyElement.classList.add('playing');
-});
-
-const keys = document.querySelectorAll('.key');
-keys.forEach(key => {
-  key.addEventListener('transitionend', e => {
-    e.target.classList.remove('playing');
-  });
-});
+}
