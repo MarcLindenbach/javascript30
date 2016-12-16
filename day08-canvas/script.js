@@ -1,21 +1,20 @@
-const canvas = document.querySelector('#draw');
-const context = canvas.getContext('2d');
 const MIN_LINE_WIDTH = 1;
 const LINE_WIDTH_STEP = .5;
 const MAX_LINE_WIDTH = 80;
 const HUE_MAX = 360;
 
+const canvas = document.querySelector('#draw');
+const context = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-
-context.lineJoin = 'round';
-context.lineCap = 'round';
-context.lineWidth = 100;
-
 canvas.addEventListener('mousemove', draw);
 canvas.addEventListener('mousedown', startDrawing);
 canvas.addEventListener('mouseup', stopDrawing);
 canvas.addEventListener('mouseout', stopDrawing);
+
+context.lineJoin = 'round';
+context.lineCap = 'round';
+context.lineWidth = 100;
 
 let isDrawing = false;
 let lastPos = {
