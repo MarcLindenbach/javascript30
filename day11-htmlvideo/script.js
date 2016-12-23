@@ -1,16 +1,23 @@
 const video = document.querySelector('video');
 const progress = document.querySelector('.progress');
 const progressBar = document.querySelector('.progress .bar');
-const playButton = document.querySelector('#play');
+const playButton = document.querySelector('.play-button');
 
-playButton.addEventListener('click', handlePlayButtonClick);
+const PAUSE_ICON = '⏸';
+const PLAY_ICON = '▶';
 
 progress.addEventListener('mousedown', handleProgreseMouseDown);
-
+playButton.addEventListener('click', handlePlayButtonClick);
 video.addEventListener('click', handlePlayButtonClick);
 video.addEventListener('timeupdate', handleTimeUpdate);
-video.addEventListener('play', () => playButton.innerHTML = '⏸');
-video.addEventListener('pause', () => playButton.innerHTML = '▶');
+video.addEventListener('play', () => {
+  playButton.innerHTML = PAUSE_ICON;
+  playButton.classList.add('playing');
+});
+video.addEventListener('pause', () => {
+  playButton.innerHTML = PLAY_ICON;
+  playButton.classList.remove('playing');
+});
 video.volume = 0;
 
 function handlePlayButtonClick() {
