@@ -1,0 +1,56 @@
+html, body {
+    margin:0;
+    padding:0;
+}
+
+body {
+    background-color: #2196F3;
+    font-family: 'Open Sans', serif;
+    text-align: center;
+}
+
+article {
+    display: inline-block;
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+    width:90vw;
+    max-width: 50rem;
+    text-align: justify;
+    padding: 1rem;
+}
+
+article h1 {
+    font-size: 2rem;
+}
+
+article h1 small {
+    color: #666;
+    font-size: 1.2rem;
+}
+
+article p {
+    font-size: .8rem;
+}
+
+article img:nth-child(odd) {
+    float: right;
+    padding-left: 1rem;
+    transform: translateX(30%) scale(0.95);
+}
+
+article img:nth-child(even) {
+    float: left;
+    padding-right: 1rem;
+    transform: translateX(-30%) scale(0.95);
+}
+
+article img {
+    opacity: 0;
+}
+
+article img.active {
+    transform: translateX(0%) scale(1);
+    opacity: 1;
+    transition: all .5s;
+}
