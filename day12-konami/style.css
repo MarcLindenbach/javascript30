@@ -1,0 +1,60 @@
+body {
+    background-color: #FFC107;
+    font-family: 'Roboto Slab', serif;
+    transition: all .5s;
+}
+
+.winner {
+    background-color: #FF5722
+}
+
+.winner .key-codes div {
+    animation: rotater 1s infinite !important;
+}
+
+.key-codes {
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    top: 40%;
+    left: 0;
+    right: 15vw;
+}
+
+.key-codes div {
+    opacity: 0;
+    border-radius: 50%;
+    background-color: #3F51B5;
+    border: .5vw solid #2196F3;
+    color: white;
+    width: 5vw;
+    height: 5vw;
+    text-align: center;
+    line-height: 4.5vw;
+    font-size: 4vw;
+    margin: .5vw;
+    transition: all .25s;
+    overflow: hidden;
+}
+
+.key-codes div.fade-in {
+    animation: fade-in .5s;
+    opacity: 1;
+}
+
+@keyframes fade-in {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes rotater {
+    0% {
+        transform: rotate(0deg)
+    }
+    50% {
+        transform: rotate(180deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
