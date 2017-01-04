@@ -1,0 +1,131 @@
+body {
+    font-family: 'Open Sans', serif;
+    background-color: #03A9F4;
+    color: #333;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin: 1%;
+    padding-bottom: 1%;
+    border-bottom: .2rem solid #01579B;
+}
+
+.header h1 {
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+}
+
+.header .add-sticky {
+    margin-left: 2%;
+    background-color: #F9A825;
+    padding: .5% 1%;
+    white-space: nowrap;
+    border-radius: 4px;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, .4);
+    font-size: .8rem;
+    font-weight:bold;
+}
+
+.header .add-sticky:hover {
+    cursor: pointer;
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, .4);
+}
+
+.stickies {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.stickies .sticky {
+    position: relative;
+    flex: 0 1 23%;
+    background-color: #FFEB3B;
+    padding: 1% 1.5% 1% .5%;
+    margin: 1%;
+    box-sizing: border-box;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, .4);
+    border-radius: 4px;
+}
+
+.stickies .sticky:hover {
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, .4);
+}
+
+.stickies .sticky h2 {
+    margin: 0;
+}
+
+.stickies .sticky input {
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333;
+    font-family: 'Open Sans', serif;
+    width: 100%;
+    border-bottom: 2px solid #FFEB3B;
+}
+
+.stickies .sticky input:focus {
+    outline: none;
+    border-bottom: 2px solid black;
+}
+
+.stickies .sticky textarea {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    resize: none;
+    font-family: 'Roboto Slab', serif;
+}
+
+.stickies .sticky textarea:focus {
+    outline: none;
+}
+
+.stickies .sticky .remove {
+    position: absolute;
+    top: 0;
+    right: .2rem;
+    font-size: 1.4rem;
+}
+
+.stickies .sticky .remove:hover {
+    cursor: pointer;
+    color: red;
+}
+
+@media (max-width: 767px) { 
+    .stickies .sticky {
+        flex: 0 1 100%;
+        padding: 1% 8% 1% 2%;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) { 
+    .stickies .sticky {
+        flex: 0 1 48%;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) { 
+    .stickies .sticky {
+        flex: 0 1 23%;
+    }
+}
+@media (min-width: 1200px) { 
+    .stickies .sticky {
+        flex: 0 1 18%;
+    }
+}
