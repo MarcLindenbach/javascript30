@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open Sans', serif;
+    font-family: 'Work Sans', serif;
     background-color: #03A9F4;
     color: #333;
 }
@@ -29,14 +29,16 @@ body {
     padding: .5% 1%;
     white-space: nowrap;
     border-radius: 4px;
-    box-shadow: 4px 4px 0 rgba(0, 0, 0, .4);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, .2);
     font-size: .8rem;
     font-weight:bold;
+    user-select: none;
+    transition: all .2s;
 }
 
 .header .add-sticky:hover {
     cursor: pointer;
-    box-shadow: 6px 6px 0 rgba(0, 0, 0, .4);
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, .2);
 }
 
 .stickies {
@@ -51,15 +53,16 @@ body {
     position: relative;
     flex: 0 1 23%;
     background-color: #FFEB3B;
-    padding: 1% 1.5% 1% .5%;
+    padding: .5% 1.5% .5% .5%;
     margin: 1%;
     box-sizing: border-box;
-    box-shadow: 8px 8px 0 rgba(0, 0, 0, .4);
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, .2);
     border-radius: 4px;
+    transition: all .2s;
 }
 
 .stickies .sticky:hover {
-    box-shadow: 10px 10px 0 rgba(0, 0, 0, .4);
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, .2);
 }
 
 .stickies .sticky h2 {
@@ -70,9 +73,9 @@ body {
     background-color: transparent;
     border: none;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: #333;
-    font-family: 'Open Sans', serif;
+    font-family: 'Libre Baskerville', serif;
     width: 100%;
     border-bottom: 2px solid #FFEB3B;
 }
@@ -89,7 +92,7 @@ body {
     padding: 0;
     width: 100%;
     resize: none;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Libre Baskerville', serif;
 }
 
 .stickies .sticky textarea:focus {
@@ -101,6 +104,7 @@ body {
     top: 0;
     right: .2rem;
     font-size: 1.4rem;
+    user-select: none;
 }
 
 .stickies .sticky .remove:hover {
