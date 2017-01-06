@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    padding:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #673AB7;
+}
+
+.shadow {
+    font-size: 5vw;
+    padding: 4vw;
+    font-weight: bold;
+    color: transparent;
+    font-family: 'Lalezar', cursive;
+    cursor: default;
+    user-select: none;
+}
