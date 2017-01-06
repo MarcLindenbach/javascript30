@@ -9,10 +9,11 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: #673AB7;
+    overflow: hidden;
 }
 
 .shadow {
-    font-size: 5vw;
+    font-size: 6vw;
     padding: 4vw;
     font-weight: bold;
     color: transparent;
