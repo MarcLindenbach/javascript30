@@ -1,6 +1,6 @@
 const addStickyButton = document.querySelector('.add-sticky');
 const stickiesList = document.querySelector('.stickies');
-let stickiesData = JSON.parse(localStorage.getItem('stickyData')) || [{
+const initialStickiesData = [{
   title: 'Click Me!',
   content: 'You can type whatever you want here',
   visible: true
@@ -10,6 +10,7 @@ let stickiesData = JSON.parse(localStorage.getItem('stickyData')) || [{
   content: 'Change us and refresh your browser',
   visible: true
 }];
+let stickiesData = JSON.parse(localStorage.getItem('stickyData')) || initialStickiesData;
 addStickyButton.addEventListener('click', handleAddStickyClick);
 
 updateView();
@@ -64,6 +65,7 @@ function createStickyElement(title, content, visible, key) {
   const text = document.createElement('textarea');
   text.addEventListener('input', handleStickyContentChange(key));
   text.innerText = content;
+  text.rows = 8;
 
   const remove = document.createElement('div');
   remove.className = 'remove';
